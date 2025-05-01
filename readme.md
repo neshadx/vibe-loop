@@ -12,7 +12,7 @@ A soothing glassmorphic website built with **HTML** and **CSS**, featuring anima
 
 ## 💡 Concept
 
-> *"Enjoy The Vibes, One Beat at a Time 🎵🍁"*
+ *"Enjoy The Vibes, One Beat at a Time 🎵🍁"*
 ---
 
 - 🍁 **Autumn Leaves Animation** inspired by CSS keyframes
@@ -21,11 +21,9 @@ A soothing glassmorphic website built with **HTML** and **CSS**, featuring anima
 
 ---
 
-> 🔄 *Built with coffee, code, and calm — loop the vibes and chill out.*
-
+ 🔄 *Built with coffee, code, and calm — loop the vibes and chill out.*
 
 ---
-
 ## 🛠️ What’s Inside
 
 - ✅ HTML & CSS Only (No JavaScript required!)
@@ -49,7 +47,7 @@ A soothing glassmorphic website built with **HTML** and **CSS**, featuring anima
 
 ## 🖼️ Preview
 
-![Vibe Loop Preview](./assets/vibelooppng)
+![Take a Look](./assets/vibeloop.png)
 
 ---
 
