@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+  --clr-primary: rgba(24, 241, 151, 0.8);
+  --clr-primary-2: rgba(24, 241, 151, 0.4);
+  --clr: #18F197;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code', monospace;
+}
+
+body {
+  color: #4f518c;
+}
+
+h1, h2, h3 {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+h4 {
+  text-transform: lowercase;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom left, var(--clr-primary), var(--clr-primary-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.glass {
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  border-radius: 1rem;
+  display: flex;
+  z-index: 2;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  text-transform: capitalize;
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.user .logo {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.user h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+.user p {
+  font-style: italic;
+}
+
+/* LINKS */
+
+.link {
+  display: flex;
+  margin: 0.5rem 0;
+  align-items: center;
+  cursor: pointer;
+}
+
+.link:hover h3 {
+  transform: scale(1.05);
+}
+
+.link img {
+  width: 1.5rem;
+}
+
+.link h3 {
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  transition: all 0.3s linear;
+  color: #39D59C;
+}
+
+.link#twitter h3 {
+  color: #1DA1F2;
+}
+
+/* MUSIC INFO */
+
+.music {
+  font-family: 'Fira Code', monospace;
+  color: #DD6B20;
+  margin-top: 30px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.music .np-key {
+  color: #34d399;
+  font-weight: 500;
+}
+
+.music .np-value {
+  color: #93c5fd;
+  font-weight: 400;
+}
+
+/* MUSIC PLAYER */
+
+.music-player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+  padding: 2rem 6rem;
+}
+
+.music-player h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+iframe {
+  height: 7rem;
+  width: 13rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/* CARD */
+
+.card {
+  display: flex;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.226));
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-info p {
+  font-style: italic;
+  margin-top: 0.5rem;
+  text-transform: lowercase;
+}
+
+/* TIME */
+
+.time {
+  background: #4f518c;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* FALLING LEAVES */
+
+.leaves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.leaf {
+  position: absolute;
+  top: -10%;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://i.ibb.co.com/Q3tc2mFS/maple-leaf.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.leaf:nth-child(1) { left: 10%; animation-delay: 0s, 0s; }
+.leaf:nth-child(2) { left: 30%; animation-delay: 2s, 1s; }
+.leaf:nth-child(3) { left: 50%; animation-delay: 4s, 2s; }
+.leaf:nth-child(4) { left: 70%; animation-delay: 1s, 1.5s; }
+.leaf:nth-child(5) { left: 90%; animation-delay: 3s, 0.5s; }
+
+@keyframes fall {
+  0% { top: -10%; transform: rotate(0deg); }
+  100% { top: 110%; transform: rotate(360deg); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(40px); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .glass {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .music-player {
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .link h3 {
+    padding: 0 1rem;
+  }
+}
