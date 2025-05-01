@@ -47,7 +47,7 @@ A soothing glassmorphic website built with **HTML** and **CSS**, featuring anima
 
 ## 🖼️ Preview
 
-![Take a Look](./assets/vibeloop.png)
+![vibeloop](./assets/vibeloop.png)
 
 ---
 
